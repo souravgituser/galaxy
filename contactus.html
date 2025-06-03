@@ -125,19 +125,19 @@
         <div class="col-12 col-md-6 contactForm">
           <form>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Full Name" required>
+              <input id="fullname" type="text" class="form-control" placeholder="Full Name" required>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email Address" required>
+              <input id="emailcontact" type="email" class="form-control" placeholder="Email Address" required>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Phone Number" required>
+              <input id="phonecontact" type="text" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+              <textarea id="textdes" class="form-control" rows="5" placeholder="Message" required></textarea>
             </div>
             <div class="mb-3 text-center">
-              <button type="submit" class="btn btn-danger">Submit</button>
+              <button id="submitform" type="submit" class="btn btn-danger">Submit</button>
             </div>
           </form>
         </div>
@@ -218,7 +218,71 @@
         clickable: true,
       },
     });
+    
   </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Get form values
+      const fullName = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('emailcontact').value.trim();
+      const phone = document.getElementById('phonecontact').value.trim();
+      const message = document.getElementById('textdes').value.trim();
+
+      // Simple email regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Validation
+      if (fullName === '' || email === '' || phone === '' || message === '') {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      if (!/^\d{10,15}$/.test(phone)) {
+        alert('Please enter a valid phone number (digits only, 10–15 characters).');
+        return;
+      }
+
+      // Simulate form submission
+      console.log('Form Data:', {
+        fullName,
+        email,
+        phone,
+        message
+      });
+
+      // Optional: send to server with fetch()
+      /*
+      fetch('/submit-endpoint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullName, email, phone, message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Form submitted successfully!');
+      })
+      .catch(error => {
+        alert('There was an error submitting the form.');
+        console.error(error);
+      });
+      */
+
+      alert('Form submitted successfully!');
+      form.reset(); // Clear the form
+    });
+  });
+</script>
 
   
 
