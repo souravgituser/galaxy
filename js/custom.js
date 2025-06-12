@@ -106,7 +106,7 @@ fetch("data/product.json")
         const count = categoryCounts[item.category.slug];
         return `
       <div class="swiper-slide">
-        <a href="/categories.html?category=${item?.category?.slug}">
+        <a href="categories.html?category=${item?.category?.slug}">
           <img
             src=${item?.category?.catimage}
             class="img-fluid"
