@@ -2,13 +2,14 @@
   "products": [
     {
       "title": "Cool Raz Galaxy X ANC Pro",
-      "category": { "name": "Headphones", "slug": "headphones" },
+      "category": { "name": "Headphones", "slug": "headphones", "catimage": "images/cate1.png" },
       "review": 4.6,
       "id": "001",
       "shortDescription": "Premium wireless ANC headphones with rich sound and long battery life.",
       "longDescription": "Cool raz X ANC Pro offers industry-leading Active Noise Cancellation technology paired with Hi-Res audio. Enjoy up to 40 hours of playback time, fast USB-C charging, and ultra-comfortable ear cushions.",
       "quantity": 1,
       "featured": true,
+      "color": "red",
       "thumbnailImage": "images/product.png",
       "gallery": [
         "images/proSlider.png",
@@ -46,13 +47,14 @@
     },
     {
       "title": "EchoMax Smart Speaker",
-      "category": { "name": "Headphones", "slug": "headphones" },
+      "category": { "name": "Headphones", "slug": "headphones", "catimage": "images/cate1.png" },
       "review": 4.3,
       "id": "002",
       "shortDescription": "Voice-controlled smart speaker with high-fidelity audio.",
       "longDescription": "EchoMax delivers premium sound with deep bass, built-in assistant, and multi-room audio capabilities. Control your smart home effortlessly.",
       "quantity": 1,
       "featured": true,
+      "color": "red",
       "thumbnailImage": "images/pro2.png",
       "gallery": ["images/pro2.png", "images/pro2.png", "images/pro2.png"],
       "socialShare": {
@@ -87,11 +89,12 @@
     {
       "title": "HyperPods True Wireless",
       "review": 4.1,
-      "category": { "name": "Headphones", "slug": "headphones" },
+      "category": { "name": "Headphones", "slug": "headphones", "catimage": "images/cate1.png" },
       "id": "003",
       "shortDescription": "Compact true wireless earbuds with dynamic sound.",
       "longDescription": "Enjoy crisp treble and powerful bass with HyperPods. Designed for all-day comfort, IPX5 water resistance, and seamless connectivity.",
       "quantity": 1,
+      "color": "red",
       "thumbnailImage": "images/pro3.png",
       "gallery": ["images/pro3.png", "images/pro3.png", "images/pro3.png"],
       "socialShare": {
@@ -126,12 +129,13 @@
     {
       "title": "NovaBeat Studio Pro",
       "review": 4.8,
-      "category": { "name": "Headphones", "slug": "headphones" },
+      "category": { "name": "Headphones", "slug": "headphones", "catimage": "images/cate1.png" },
       "id": "004",
       "shortDescription": "Professional over-ear headphones for studio use.",
       "longDescription": "Experience clarity and flat response with NovaBeat Studio Pro. Ideal for mixing, mastering, and detailed audio monitoring.",
       "quantity": 1,
       "featured": true,
+      "color": "red",
       "thumbnailImage": "images/pro4.png",
       "gallery": ["images/pro4.png", "images/pro4.png", "images/pro4.png"],
       "socialShare": {
@@ -165,12 +169,13 @@
     },
     {
       "title": "BassBlitz 360",
-      "category": { "name": "Bluetooth Speaker", "slug": "bluetooth-speaker" },
+      "category": { "name": "TWS Earphone", "slug": "TWS Earphone", "catimage": "images/cate2.png" },
       "review": 4.0,
       "id": "005",
       "shortDescription": "Rugged waterproof Bluetooth speaker with 360° sound.",
       "longDescription": "Take your music anywhere with BassBlitz 360. Shockproof, waterproof, and battery packed for your next adventure.",
       "quantity": 1,
+      "color": "red",
       "thumbnailImage": "images/pro5.png",
       "gallery": ["images/pro5.png", "images/pro5.png", "images/pro5.png"],
       "socialShare": {
@@ -205,14 +210,16 @@
     {
       "title": "AuraClip Neckband Pro",
       "category": {
-        "name": "Wireless Neckbands",
-        "slug": "wireless-neckbands"
+        "name": "Wire Headphone",
+        "slug": "Wire Headphone",
+        "catimage": "images/cate3.png"
       },
       "review": 3.9,
       "id": "006",
       "shortDescription": "Comfort-fit neckband with dual drivers and fast charging.",
       "longDescription": "Enjoy HD audio with noise isolation and up to 25 hours of playback with the AuraClip neckband, designed for active lifestyles.",
       "quantity": 1,
+      "color": "red",
       "featured": true,
       "thumbnailImage": "images/pro6.png",
       "gallery": ["images/pro6.png", "images/pro6.png", "images/pro6.png"],
@@ -247,12 +254,13 @@
     },
     {
       "title": "WavePlay Kids Edition",
-      "category": { "name": "Earbuds", "slug": "earbuds" },
+      "category": { "name": "IEM Ear Phone", "slug": "IEM Ear Phone", "catimage": "images/cate4.png" },
       "review": 4.2,
       "id": "007",
       "shortDescription": "Colorful and safe headphones for kids with volume limit.",
       "longDescription": "WavePlay Kids Edition is built with safety in mind – soft ear cups, tangle-free cables, and a volume limit to protect young ears.",
       "quantity": 1,
+      "color": "red",
       "thumbnailImage": "images/pro7.png",
       "gallery": ["images/pro7.png", "images/pro7.png", "images/pro7.png"],
       "socialShare": {
@@ -286,12 +294,13 @@
     },
     {
       "title": "PulseAir 5 Pro",
-      "category": { "name": "Earbuds", "slug": "earbuds" },
+      "category": { "name": "IEM Ear Phone", "slug": "IEM Ear Phone", "catimage": "images/cate4.png" },
       "review": 4.7,
       "id": "008",
       "shortDescription": "Flagship ANC earbuds with wireless charging case.",
       "longDescription": "PulseAir 5 Pro offers seamless pairing, IPX7 rating, and a wireless charging case with fast pairing and deep bass.",
       "quantity": 1,
+      "color": "red",
       "thumbnailImage": "images/pro8.png",
       "gallery": ["images/pro8.png", "images/pro8.png", "images/pro8.png"],
       "socialShare": {

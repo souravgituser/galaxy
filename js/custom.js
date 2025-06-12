@@ -3,6 +3,7 @@ fetch("data/product.json")
   .then((data) => {
     const productList = document.getElementById("productList");
     const productList2 = document.getElementById("productList2");
+    const categorySwiper = document.getElementById("categorySwiper");
 
     // const featureProducts = data.products.slice(0, 4)
 
@@ -10,6 +11,25 @@ fetch("data/product.json")
     const bestSeller = data.products.slice(0, 4);
 
     const filterProducts = data.products?.filter((item) => item.featured);
+    6;
+    const categoryCounts = {};
+    data.products.forEach((item) => {
+      if (item.category && item.category.slug) {
+        categoryCounts[item.category.slug] =
+          (categoryCounts[item.category.slug] || 0) + 1;
+      }
+    });
+
+    const uniqueCategories = {};
+    const getCategoryProduct = data.products.filter((item) => {
+      if (item.category && !uniqueCategories[item.category.slug]) {
+        uniqueCategories[item.category.slug] = true;
+        return true;
+      }
+      return false;
+    });
+
+    console.log("getCategoryProduct", getCategoryProduct);
 
     console.log("filter", filterProducts);
 
@@ -18,12 +38,14 @@ fetch("data/product.json")
       li.innerHTML = `
           <div class="cus-card">
             <div class="cusCardimg">
-              <img src="${product.thumbnailImage}" class="img-fluid" alt="${product.title}">
+              <img src="${product.thumbnailImage}" class="img-fluid" alt="${
+        product.title
+      }">
             </div>
             <div class="cardContent">
               <h4 class="h4Title"><a href="product.html" onclick='viewProduct(${JSON.stringify(
-                    product
-                  )})'>${product.title}</a></h4>
+                product
+              )})'>${product.title}</a></h4>
               <div class="priceWrap">
                 <div class="price">
                   Rs. <span>${product.price?.regular}</span>
@@ -33,10 +55,12 @@ fetch("data/product.json")
                 </div>
               </div>
               <div class="btnWrap">
-                <button class="btn btn-outline-light" onclick="addToCart('${product.id}')">ADD TO CART</button>
+                <button class="btn btn-outline-light" onclick="addToCart('${
+                  product.id
+                }')">ADD TO CART</button>
                 <a href="product.html" class="btn btn-light" onclick='viewProduct(${JSON.stringify(
-                    product
-                  )})'>VIEW PRODUCT</a>
+                  product
+                )})'>VIEW PRODUCT</a>
               </div>
             </div>
           </div>
@@ -48,12 +72,14 @@ fetch("data/product.json")
       li.innerHTML = `
           <div class="cus-card">
             <div class="cusCardimg">
-              <img src="${product.thumbnailImage}" class="img-fluid" alt="${product.title}">
+              <img src="${product.thumbnailImage}" class="img-fluid" alt="${
+        product.title
+      }">
             </div>
             <div class="cardContent">
               <h4 class="h4Title"><a href="product.html" onclick='viewProduct(${JSON.stringify(
-                    product
-                  )})'>${product.title}</a></h4>
+                product
+              )})'>${product.title}</a></h4>
               <div class="priceWrap">
                 <div class="price">
                   Rs. <span>${product.price?.regular}</span>
@@ -63,16 +89,41 @@ fetch("data/product.json")
                 </div>
               </div>
               <div class="btnWrap">
-                <button class="btn btn-outline-light" onclick="addToCart('${product.id}')">ADD TO CART</button>
+                <button class="btn btn-outline-light" onclick="addToCart('${
+                  product.id
+                }')">ADD TO CART</button>
                 <a href="product.html" class="btn btn-light" onclick='viewProduct(${JSON.stringify(
-                    product
-                  )})'>VIEW PRODUCT</a>
+                  product
+                )})'>VIEW PRODUCT</a>
               </div>
             </div>
           </div>
         `;
       productList.appendChild(li);
     });
+    const categoryHtml = getCategoryProduct
+      .map((item) => {
+        const count = categoryCounts[item.category.slug];
+        return `
+      <div class="swiper-slide">
+        <a href="/categories.html?category=${item?.category?.slug}">
+          <img
+            src=${item?.category?.catimage}
+            class="img-fluid"
+            alt="categoies"
+          />
+        </a>
+        <div class="cateTitle">
+          <h3 class="text-center">${item?.category?.name}</h3>
+        </div>
+        <div class="cateCount text-center">
+          <span>${count} Items</span>
+        </div>
+      </div>
+      `;
+      })
+      .join("");
+    categorySwiper.innerHTML = categoryHtml;
   })
   .catch((error) => {
     console.error("Error loading products:", error);
@@ -103,7 +154,6 @@ function addToCart(productId) {
     .catch((error) => {
       console.error("Error loading products:", error);
     });
-    
 }
 
 //KNOW MORE
@@ -147,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cartItemHtml = `
         <div class="row carttableRow align-items-center">
-          <div class="col-7">
+          <div class="col-md-7 col-6">
             <div class="cartProductdetails">
               <div class="cartMedia">
                 <img src="${item.thumbnailImage}" class="img-fluid" alt="${item.title}" />
@@ -155,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="cartdetails">
                 <h4>${item.title}</h4>
                 <div class="cartsinPrice">Rs. <span>${item.price?.sale}</span></div>
-                <div class="cartColor">Color <span>${item.color}</span></div>
+                <div class="cartColor">Color: <span>${item.color}</span></div>
               </div>
             </div>
           </div>
@@ -169,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="images/delCart.png" class="img-fluid" alt="Remove" />
             </div>
           </div>
-          <div class="col-2 text-end">
+          <div class="col-md-2 col-3 text-end">
             <div class="profinalPrice">Rs. <span>${itemTotal}</span></div>
           </div>
         </div>
@@ -294,3 +344,69 @@ document.addEventListener("click", function (e) {
 function viewProduct(product) {
   localStorage.setItem("singleProduct", JSON.stringify(product));
 }
+
+const categoryProductDisplay = () => {
+  if (!window.location.pathname.includes("categories.html")) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const categorySlug = params.get("category");
+
+  console.log("categorySlug", params);
+
+  fetch("data/product.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const filtered = data.products.filter(
+        (product) => product.category?.slug === categorySlug
+      );
+
+      const container = document.getElementById("categoryProductListing");
+
+      if (filtered.length === 0) {
+        container.innerHTML = "<li>No products found in this category.</li>";
+        return;
+      }
+
+      const categoryHTML = filtered
+        .map((item) => {
+          return `<li>
+                <div class="cus-card">
+                  <div class="cusCardimg">
+                    <img
+                      src=${item?.thumbnailImage}
+                      class="img-fluid"
+                      alt=${item?.title}
+                    />
+                  </div>
+                  <div class="cardContent">
+                    <h4 class="h4Title">${item?.title}</h4>
+                    <div class="priceWrap">
+                      <div class="price">
+                        Rs. <span id="priceMain">${item?.price?.sale}</span>
+                      </div>
+                      <div class="priceMrp">
+                        Rs. <span id="priceMain">${item?.price?.regular}</span>
+                      </div>
+                    </div>
+                    <div class="btnWrap">
+                      <button class="btn btn-outline-light" onclick="addToCart('${
+                        item.id
+                      }')">ADD TO CART</button>
+                      <a href='product.html' class="btn btn-light" onclick='viewProduct(${JSON.stringify(
+                        item
+                      )})'>Know More</a>
+                    </div>
+                  </div>
+                </div>
+              </li>`;
+        })
+        .join("");
+
+      container.innerHTML = categoryHTML;
+    })
+    .catch((error) => {
+      console.error("Error loading products:", error);
+    });
+};
+
+categoryProductDisplay();

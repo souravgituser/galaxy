@@ -567,7 +567,8 @@ footer .footerLinks li a:hover {
 
 .aboutSec {
 	background: #333333;
-	padding: 6rem 0;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 }
 
 .aboutSec h2 {
@@ -1294,16 +1295,635 @@ footer .footerLinks li a:hover {
 	color: #ffffff;
 	line-height: 1;
 }
-
-@media (min-width: 1799px) {
+.sliderContainer .swiper-backface-hidden .swiper-slide {
+	text-align: center;
+}
+@media (min-width: 1800px) {
 	.container {
 		max-width: 1530px;
 	}
 }
 
-@media (max-width: 768px) {
-	.btn-submit {
-		padding: 10px;
+@media(max-width: 1799px) {
+	.productlistingWrap {
+		column-gap: 1rem;
+		justify-content: space-between;
+	}
+	.topDealrow .topBox {
+		max-width: 420px;
+		width: 100%;
+	}
+	.topDealrow .topBox2 {
+		max-width: 420px;
+		width: 100%;
+	}
+	.thankSection {
+		background-size: 300px;
+		padding-top: 5rem;
+	}
+	.order-table th, .order-table td {
+		font-size: 2rem;
+	}
+}
+@media(max-width: 1399px) {
+	.bannerSec h1 {
+		font-size: 4rem;
+		margin-bottom: 2rem;
+	}
+	.bannerSec h6 {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+	.btn-wrap .btn {
+		font-size: 1.6rem;
+		width: 190px;
+		height: 50px;
+	}
+	.bannerSec p {
+		font-size: 1.6rem;
+	}
+	h2.h2Title {
+		font-size: 4.5rem;
+	}
+	.categorisSce p {
+		font-size: 1.6rem;
+	}
+	.cateTitle h3 {
+		font-size: 2rem;
+	}
+	.cateCount span {
+		font-size: 1.4rem;
+	}
+	.secBestseller {
+		background: #333333;
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+	}
+	.productlistingWrap {
+		margin-top: 4rem;
+	}
+	.productlistingWrap li {
+		max-width: 250px;
+	}
+	.h4Title {
+		font-size: 2rem;
+	}
+	.price {
+		font-size: 1.4rem;
+	}
+	.btnWrap .btn {
+		width: 100px;
+	}
+	.btnWrap {
+		margin-top: 1rem;
+	}
+	.priceMrp {
+		font-size: 1.4rem;
+	}
+	.topDiscount {
+		background: #161616;
+		padding-top: 4rem;
+		padding-bottom: 5rem;
+	}
+	.dealcontent h3 {
+		font-size: 3.6rem;
+	}
+	.topDealrow .topBox {
+        max-width: 365px;
+    }
+	.dealcontent h6 {
+		font-size: 1.5rem;
+	}
+	.topDealrow {
+		margin-top: 4rem;
+	}
+	.discountSec {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	.topDealrow .topBox2 {
+        max-width: 360px;
+    }
+	.dealcontent h3 {
+        font-size: 3rem;
+    }
+	.discountSec .dealcontent h6 {
+		font-size: 2.2rem;
+	}
+	discountSec .dealcontent a {
+		font-size: 1.6rem;
+	}
+	.textTestimo {
+		font-size: 2rem;
+		max-width: 400px;
+	}
+	.dealcontent h3 {
+		max-width: 240px;
+	}
+	header .navbar-light .navbar-nav .nav-link {
+		font-size: 1.8rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.contact-info p {
+		font-size: 2.2rem;
+		padding-bottom: 2rem;
+	}
+	.contactSection input {
+		height: 8rem;
+		border-radius: 1.2rem;
+		margin-bottom: 4rem;
+		font-size: 2rem;
+		padding-inline: 2.5rem;
+	}
+	.contactSection textarea {
+		border-radius: 1.2rem;
+		margin-bottom: 4rem;
+		font-size: 2rem;
+		padding-inline: 2.5rem;
+	}
+	.contactForm button.btn-danger {
+		height: 8rem;
+		font-size: 3rem;
+		border-radius: 1.2rem;
+	}
+	.contact-info p {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+	.contact-info h2 {
+		margin-bottom: 2.5rem;
+	}
+	.contactSection {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	.productSec h1 {
+		font-size: 3rem;
+	}
+	.starBox {
+		padding: 0;
+	}
+	.priceProduct {
+		font-size: 2rem;
+	}
+	.sortDes {
+		margin-top: 1rem;
+	}
+	.qtyBox select {
+		margin-top: 1.5rem;
+	}
+	.btn-wrap {
+		margin-top: 2rem;
+	}
+	.shareIcons ul {
+		margin-top: 2rem;
+	}
+	.returnText p {
+		margin-top: 2rem;
+	}
+	.descriptionContainer {
+		margin-top: 5rem;
+	}
+	.checkMedia {
+		width: 60%;
+	}
+	.checkImg {
+		width: 80px;
+		height: 80px;
+		padding: .5rem;
+	}
+	.checksinglePrice {
+		width: 40%;
+	}
+	.thankSection {
+        background: url(../images/imgleft.png) top left, url(../images/imgright.png) top right;
+		background-repeat: no-repeat;
+    	background-color: #333333;
+		background-size: 200px;
+	}
+	.thankSection p {
+		font-size: 1.6rem;
+	}
+	.order-table th, .order-table td {
+        font-size: 1.6rem;
+    }
+	.thankSection {
+		padding-bottom: 1rem;
+	}
+}
+@media(max-width: 1199px) {
+	.bannerSec h1 {
+        font-size: 3rem;
+    }
+	.bannerSec h6 {
+        font-size: 1.2rem;
+    }
+	.bannerSec p {
+        font-size: 1.4rem;
+		max-width: 390px;
+    }
+	.btn-wrap .btn {
+        font-size: 1.2rem;
+        width: 155px;
+        height: 40px;
+    }
+	.productlistingWrap li {
+        max-width: 220px;
+    }
+	.h4Title {
+        font-size: 1.8rem;
+    }
+	.btnWrap .btn {
+		width: 100%;
+	}
+	.cardContent a.btn {
+		margin-top: 1rem;
+	}
+	.cardContent {
+		padding: 2rem 1.7rem;
+	}
+	h2.h2Title {
+        font-size: 3.5rem;
+    }
+	.productlistingWrap {
+        margin-top: 3rem;
+    }
+	.topDealrow .topBox {
+        max-width: 300px;
+    }
+	.dealcontent h3 {
+        max-width: 205px;
+		font-size: 2.5rem;
+    }
+	.topDealrow .topBox2 {
+        max-width: 300px;
+    }
+	.discountSec .dealcontent h6 {
+        font-size: 1.6rem;
+    }
+	.discountSec .dealcontent a {
+		font-size: 1.4rem;
+		margin-top: 0;
+	}
+	h2.h2Title {
+        font-size: 3rem;
+    }
+	.floatImg {
+		max-width: 265px;
+	}
+	.toppadding {
+		padding-top: 80px;
+	}
+	.textTestimo {
+        font-size: 1.6rem;
+        max-width: 370px;
+    }
+	.user h5 {
+		font-size: 1.4rem;
+	}
+	.bannerSec img {
+		max-width: 360px;
+	}
+	.sortDes {
+		font-size: 1.6rem;
+	}
+	.returnText p {
+		font-size: 1.6rem;
+	}
+	.shareIcons ul {
+		margin-top: 2rem;
+	}
+	.productSec h1 {
+        font-size: 2.5rem;
+    }
+	.priceProduct {
+        font-size: 1.75rem;
+    }
+	.qtyBox select {
+		width: 155px;
+		height: 45px;
+		font-size: 1.4rem;
+	}
+	.returnText p, .sortDes, .descriptionContainer .tab-content .tab-pane p {
+        font-size: 1.4rem;
+    }
+	
+	
+}
+@media(max-width: 991px) {
+	.bannerSec {
+		padding-block: 2rem 8rem;
+	}
+	.productlistingWrap li {
+        max-width: 300px;
+    }
+	.productlistingWrap {
+		justify-content: center;
+		    row-gap: 2rem;
+			column-gap: 2rem;
+	}
+	.topDealrow .topBox {
+        max-width: 225px;
+    }
+	.dealcontent h6 {
+        font-size: 1.2rem;
+    }
+	.dealcontent h3 {
+        max-width: 145px;
+        font-size: 1.7rem;
+    }
+	.topDiscount .btn-danger {
+		font-size: 1rem;
+		width: 9rem;
+		height: 3rem;
+	}
+	.topDealrow .topBox2 {
+        max-width: 230px;
+    }
+	.discountSec .dealcontent h6 {
+        font-size: 1.2rem;
+    }
+	.dealcontent h3 {
+        font-size: 1.6rem;
+    }
+	.discountSec .dealcontent a {
+        font-size: 1rem;
+    }
+	.bannerSec h1 {
+        font-size: 2.5rem;
+    }
+	.btn-wrap {
+		margin-top: 3rem;
+	}
+	.h4Title {
+        font-size: 2.5rem;
+    }
+	.price, .priceMrp {
+        font-size: 1.8rem;
+    }
+	.textTestimo {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+	.user p {
+		font-size: 1.2rem;
+	}
+	.floatImg {
+        max-width: 230px;
+    }
+	footer .footerLinks li a {
+		font-size: 1.4rem;
+	}
+	footer .footerLinks {
+		max-width: 550px;
+	}
+	.bannerSec img {
+        max-width: 270px;
+    }
+	.bannerSec .carousel-indicators {
+		bottom: -7rem;
+	}
+	.returnText p, .sortDes, .descriptionContainer .tab-content .tab-pane p {
+        font-size: 1.6rem;
+    }
+	.productSec .btn-wrap button.btn {
+		width: 100%;
+		margin-right: 0;
+	}
+	.qtyBox select {
+		width: 100%;
+	}
+	.btn-wrap {
+		
+		margin-top: 2rem;
+	}
+	.btn-wrap .btn {
+		height: 4.5rem;
+	}
+	.productSec h1 {
+		margin-top: 1rem;
+	}
+	.descriptionContainer {
+        margin-top: 2rem;
+    }
+	.descriptionContainer .tab-content {
+		padding: 2rem;
+	}
+	.descriptionContainer .nav-tabs .nav-link {
+		width: 130px;
+		height: 50px;
+		font-size: 1.4rem;
+	}
+	.cartQtyWrap .input-group {
+		margin-right: 1rem;
+		max-width: 130px;
+	}
+	.rightCheckout {
+		padding-left: 7.5px;
+	}
+	.rightcheckoutInner {
+		padding: 1rem 2rem;
+	}
+	.checkImg {
+		width: 7rem;
+		height: 7rem;
+	}
+	.checkproDetails {
+		margin-left: 0.5rem;
+		width: calc(100% - 7.5rem);
+	}
+	.checksinglePrice {
+		font-size: 1rem;
+	}
+}
+@media(max-width: 767px) {
+	header .navbar-light .navbar-toggler-icon {
+		background: url(../images/list.png);
+		background-size: 100%;
+	}
+	header .navbar-toggler {
+		font-size: 2.25rem;
+	}
+	.headerIcons {
+        position: absolute;
+        top: 1rem;
+        right: 6rem;
+    }
+	header .navbar-light .navbar-brand {
+		font-size: 2.5rem;
+	}
+	header, footer, section {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	header .navbar-light .navbar-toggler {
+		padding-right: 0;
+	}
+	header .navbar-light .navbar-nav .nav-link {
+		border-bottom: 2px solid #ffffff;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.bannerSec {
+        padding-block: 0rem 8rem;
+    }
+	.buySection {
+		background: #333333;
+	}
+	.topDealrow .topBox {
+        max-width: 100%;
+		margin-top: 2.5rem;
+    }
+	.dealcontent h3 {
+        font-size: 3.6rem;
+		max-width: 200px;
+    }
+	.dealcontent h6 {
+        font-size: 1.4rem;
+    }
+	.topDiscount .btn-danger {
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 4rem;
+    }
+	.topDealrow {
+        margin-top: 0;
+    }
+	h2.h2Title {
+        font-size: 2.5rem;
+    }
+	.topDealrow .topBox2 {
+		max-width: 100%;
+		margin-top: 3rem;
+	}
+	.floatImg {
+		position: relative;
+		left: 0;
+		right: 0;
+		transform: inherit;
+	}
+	.toppadding {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.testimoSec .carousel-item {
+		border-radius: 1.6rem !important;
+		overflow: hidden;
+	}
+	    .dealcontent h3 {
+        font-size: 3.6rem;
+        max-width: 260px;
+    }
+	    .discountSec .dealcontent h6 {
+        font-size: 1.6rem;
+    }
+	.discountSec .dealcontent a {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+	.bannerSec h6 {
+        font-size: 1.6rem;
+    }
+	.aboutSec p {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+	.aboutSec {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	.aboutSec h2 {
+		margin-bottom: 1.5rem;
+	}
+	.aboutSec h3 {
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	.contactForm form {
+		padding-left: 0;
+		margin-top: 2rem;
+	}
+	.productlistingWrap li {
+        max-width: 340px;
+    }
+	.sliderCol {
+		padding-right: 7.5px;
+	}
+	.cartMedia {
+		max-width: 60px;
+		height: 60px;
+	}
+	.cartdetails {
+		margin-left: .5rem;
+	}
+	.cartdetails {
+        margin-left: .5rem;
+        width: calc(100% - 70px);
+    }
+	.cartdetails h4 {
+		font-size: 1rem;
+		margin-bottom: .25rem;
+	}
+	.cartdetails .cartsinPrice {
+    	font-size: 1.2rem;
+		margin-bottom: .25rem;
+	}
+	.cartdetails .cartColor {
+		font-size: .8rem;
+	}
+	.cartQtyWrap button, .cartQtyWrap input {
+		font-size: 1.2rem;
+		padding-inline: .5rem;
+		padding-block: .5rem;
+	}
+	.cartQtyWrap .input-group {
+        margin-right: .5rem;
+        max-width: 58px;
+    }
+	.profinalPrice {
+		font-size: 1.2rem;
+		text-align: left;
+	}
+	.cartSec {
+		padding: 3rem 1.5rem;
+	}
+	.checkoutCart {
+		margin-top: 2rem;
+	}
+	.cartQtyWrap {
+		padding: 0;
+	}
+	.statmentText {
+		margin-top: 1.5rem;
+	}
+	.checkoutBtn {
+		margin-top: 1.5rem;
+	}
+	footer {
+		padding-top: 3rem;
+	}
+	.checkoutSection {
+		padding-bottom: 3rem;
+		padding-top: 3rem;
+	}
+	.leftCheckout {
+		order: 2;
+		margin-top: 4rem;
+	}
+	.rightCheckout {
+		order: 1;
+		margin-bottom: 3rem;
+	}
+	.codRow {
+		margin-top: .5rem;
+	}
+	.finalCheckout {
+		margin-top: 2rem;
+	}
+	.thankSection {
+		background-image: none;
 	}
 }
 
@@ -1314,5 +1934,8 @@ footer .footerLinks li a:hover {
 
 	.productSec .slick-next {
 		right: -15px;
+	}
+	.checkoutBtn .btn {
+		width: 100%;
 	}
 }
