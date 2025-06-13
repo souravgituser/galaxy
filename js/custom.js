@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12 text-center py-5">
           <img src="images/empty-cart.png" alt="Empty Cart" style="max-width: 150px; opacity: 0.6;" />
           <h4 class="mt-3 text-white">Your cart is empty</h4>
-          <a href="/" class="btn btn-outline-light mt-3">Continue Shopping</a>
+          <a href="index.html" class="btn btn-outline-light mt-3">Continue Shopping</a>
         </div>
       </div>
     `;
